@@ -17,6 +17,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2 " tab width=2 for default
 
 au BufNewFile,BufRead *.py set ts=4 sw=4 sts=4 " except for python
 au BufNewFile,BufRead *.sh set ts=4 sw=4 sts=4 " except for sh
+au BufNewFile,BufRead *.go set ts=4 sw=4 sts=4 " except for go
 au BufNewFile,BufRead Makefile set noet " no et for makefile
 
 set all& hi=100 bs=indent,eol,start nuw=4 vb nu
