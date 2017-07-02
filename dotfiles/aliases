@@ -1,0 +1,31 @@
+alias l='ls -Gh'
+alias ls='ls --color'
+alias ll='ls -al'
+alias s='git status'
+alias g='git lg'
+alias h='history'
+alias x='exit'
+
+alias p=previous_path
+alias pp='p 2'
+alias ppp='p 3'
+alias pppp='p 4'
+alias ppppp='p 5'
+alias pppppp='p 6'
+alias ppppppp='p 7'
+
+# 'p' to go up dir
+# 'p <number>' to go up dir * <number>
+function previous_path {
+    if [ -z "$1" ]; then
+        n=1
+    else
+        n="$1"
+    fi
+    DEST='..'
+    while [ "1" -lt "$n" ]; do
+        DEST="$DEST/.."
+        let n=n-1
+    done
+    cd $DEST
+}

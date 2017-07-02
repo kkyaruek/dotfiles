@@ -1,23 +1,20 @@
-alias ls='ls -Gh'
+source ./.aliases
+source ./.colorbash
 
 EDITOR=vim
 
-function timer_start {
-    timer=${timer:-$SECONDS}
+function __last_rc () {
+    RC=$?
+    if [ "$RC" -ne 0 ]; then
+        echo -e "${txtpur}${RC}${txtylw}:"
+    fi
 }
 
-function timer_stop {
-    timer_show=$(($SECONDS - $timer))
-    unset timer
-}
+LAST_RC='$(__last_rc)'
+PS1="$txtpur\t\[$txtrst\]:\[$txtylw\]\u\[$txtrst\]:\[$txtgrn\]\w:$LAST_RC\!\[$txtrst\]> "
 
-trap 'timer_start' DEBUG
+export HISTTIMEFORMAT="%d/%m/%y %T "
 
-if [ "$PROMPT_COMMAND" == "" ]; then
-    PROMPT_COMMAND="timer_stop"
-else
-    PROMPT_COMMAND="$PROMPT_COMMAND; timer_stop"
-fi
-
-PS1='[last: ${timer_show}s] [\t] [\w] $ '
+export PS1
+export EDITOR
 
