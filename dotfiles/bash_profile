@@ -1,5 +1,5 @@
-source ./.aliases
-source ./.colorbash
+source $HOME/.aliases
+source $HOME/.colorbash
 
 EDITOR=vim
 
