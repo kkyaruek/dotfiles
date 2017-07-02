@@ -1,0 +1,83 @@
+" basic
+set nocompatible
+set noswapfile
+
+" encoding
+set tenc=korea
+set enc=utf-8
+set fileencodings=utf-8,cp949
+set termencoding=utf-8
+
+" editor
+filetype plugin on
+filetype indent on
+
+set et
+set tabstop=2 shiftwidth=2 softtabstop=2 " tab width=2 for default
+
+au BufNewFile,BufRead *.py set ts=4 sw=4 sts=4 " except for python
+au BufNewFile,BufRead *.sh set ts=4 sw=4 sts=4 " except for sh
+au BufNewFile,BufRead Makefile set noet " no et for makefile
+
+set all& hi=100 bs=indent,eol,start nuw=4 vb nu
+set nobackup modeline modelines=5
+set nowrap " no wordwrap
+set magic
+set selection=exclusive " this option defines a behavior of selection.
+set keymodel=startsel,stopsel " list of comma-separated words, which enable special things that keys can do.
+set smartindent " do smart autoindenting when starting a new line.
+
+" search
+set hlsearch " when there is a previous search pattern, highlight all its matches.
+set ignorecase " cases of normal letters are ignored.
+set smartcase " override the 'ignorecase' option if a search pattern contains upper case characters.
+
+" to remember lastly edited line
+if has("autocmd")
+    autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
+endif
+
+" cursor crosshair
+hi CursorLine cterm=NONE ctermbg=darkblue guibg=darkblue
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
+set cursorline
+
+" highlight trailling whitespace (inspired by kchmck/vim-coffee-script)
+hi def link traillingWhiteSpaceError Error
+match traillingWhiteSpaceError /\S\@<=\s\+$/
+
+set colorcolumn=101
+
+" look and feel
+set t_Co=256 " for powerline
+set laststatus=2
+
+" keymap
+au FileType python map <C-P> :!python3 %<CR>
+au FileType javascript map <C-P> :!node %<CR>
+
+" vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+
+call vundle#end()
+
+" plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'nanotech/jellybeans.vim'
+Plug 'fatih/vim-go'
+Plug 'derekwyatt/vim-scala'
+Plug 'rust-lang/rust.vim'
+
+call plug#end()
+
+" color
+syntax enable
+colorscheme jellybeans
+
