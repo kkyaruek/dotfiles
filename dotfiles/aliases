@@ -2,7 +2,7 @@ alias l='ls -Gh'
 alias ls='ls --color'
 alias ll='ls -al'
 alias s='git status'
-alias g='git lg'
+alias g='git log'
 alias h='history'
 alias x='exit'
 
