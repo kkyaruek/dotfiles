@@ -61,13 +61,6 @@ set laststatus=2
 au FileType python map <C-P> :!python3 %<CR>
 au FileType javascript map <C-P> :!node %<CR>
 
-" vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-
-call vundle#end()
-
 " plug
 call plug#begin('~/.vim/plugged')
 

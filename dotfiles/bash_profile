@@ -11,7 +11,7 @@ function __last_rc () {
 }
 
 LAST_RC='$(__last_rc)'
-PS1="$txtpur\t\[$txtrst\]:\[$txtylw\]\u\[$txtrst\]:\[$txtgrn\]\w:$LAST_RC\!\[$txtrst\]> "
+PS1="\\[$txtpur\t\[$txtrst\]:\[$txtylw\]\u\[$txtrst\]:\[$txtgrn\]\w:$LAST_RC\!\[$txtrst\]> "
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
