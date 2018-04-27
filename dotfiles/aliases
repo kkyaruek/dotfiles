@@ -1,5 +1,4 @@
-alias l='ls -Gh'
-alias ls='ls --color'
+alias ls='ls -Gh'
 alias ll='ls -al'
 alias s='git status'
 alias g='git log'
