@@ -6,12 +6,12 @@ EDITOR=vim
 function __last_rc () {
     RC=$?
     if [ "$RC" -ne 0 ]; then
-        echo -e "${txtpur}${RC}${txtylw}:"
+        echo -e "${RC}:"
     fi
 }
 
 LAST_RC='$(__last_rc)'
-PS1="\\[$txtpur\]\t\[$txtrst\]:\[$txtylw\]\u\[$txtrst\]:\[$txtgrn\]\w:$LAST_RC\!\[$txtrst\]> "
+PS1="\\[$txtpur\]\t\[$txtrst\]:\[$txtylw\]\u\[$txtrst\]:\[$txtgrn\]\w\[$txtrst\]:$LAST_RC\[$txtblu\]\!\[$txtrst\]> "
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
