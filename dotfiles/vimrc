@@ -64,7 +64,8 @@ au FileType javascript map <C-P> :!node %<CR>
 " plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'nanotech/jellybeans.vim'
+Plug 'connorholyday/vim-snazzy'
+Plug 'joshdick/onedark.vim'
 Plug 'fatih/vim-go'
 Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
@@ -73,5 +74,7 @@ call plug#end()
 
 " color
 syntax enable
-colorscheme jellybeans
+
+let g:SnazzyTransparent = 1
+colorscheme snazzy
 
