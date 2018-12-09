@@ -1,9 +1,9 @@
 ## Installation
 ```sh
-$ ./install_dotfiles.sh
+$ ./install.sh
 ```
 
 ## Updating dotfiles
 ```sh
-$ ./update_dotfiles.sh
+$ ./update.sh
 ```
