@@ -20,7 +20,7 @@ au BufNewFile,BufRead *.sh set ts=4 sw=4 sts=4 " except for sh
 au BufNewFile,BufRead *.go set ts=4 sw=4 sts=4 " except for go
 au BufNewFile,BufRead Makefile set noet " no et for makefile
 
-set all& hi=100 bs=indent,eol,start nuw=4 vb nu
+set all& hi=100 bs=indent,eol,start nuw=4 nu
 set nobackup modeline modelines=5
 set nowrap " no wordwrap
 set magic
