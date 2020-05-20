@@ -1,0 +1,8 @@
+# Git
+alias gh='git config --global user.name ibato; git config --global user.email yoonhaerim@gmail.com'
+alias oss='git config --global user.name haerim-yun; git config --global user.email haerim.yun@navercorp.com'
+
+# Java
+alias j7='sdk use java 7.0.262-zulu'
+alias j8='sdk use java 8.0.252.hs-adpt'
+alias j11='sdk use java 11.0.7.hs-adpt'
