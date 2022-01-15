@@ -3,7 +3,6 @@ alias github='git config --global user.name kkyaruek; git config --global user.e
 alias oss='git config --global user.name haerim-yun; git config --global user.email haerim.yun@navercorp.com'
 
 # Java
-alias j7='sdk use java 7.0.322-zulu'
-alias j8='sdk use java 8.0.292.hs-adpt'
-alias j11='sdk use java 11.0.11.hs-adpt'
+alias j8='sdk use java 8.0.312-zulu'
+alias j11='sdk use java 11.0.13-zulu'
 alias j17='sdk use java 17.0.1-tem'
